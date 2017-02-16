@@ -1,6 +1,5 @@
 package org.meron.collection;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,7 +10,7 @@ public class VectorvsArray {
 
 	public static void main(String[] args) {
 		Vector<Integer> x = new Vector<>();
-		int[] a = new int[4];	
+		//int[] a = new int[4];	
 		Set<Integer> set = new HashSet<>();
 		
 		List<Integer> list = new LinkedList<>();
