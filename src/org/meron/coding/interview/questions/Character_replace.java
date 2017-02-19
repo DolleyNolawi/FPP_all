@@ -1,8 +1,5 @@
 package org.meron.coding.interview.questions;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
 
 /*
  * Meron Abrha
@@ -12,9 +9,14 @@ import org.junit.Test;
 public class Character_replace {
 	
 	public String replace(String str , char ch){
-		char str2 = str.charAt(0);
-		str2 = ch;
-		return str2 + str.substring(1);
+		
+		for(int i=0 ; i < str.length() ; i++){
+			if(str.charAt(i) == ch){
+				str = str.substring(0, i) + 'Q' + str.substring(i+1);				
+			}
+		}
+		
+		return str.substring(0);
 	}
 	
 	public String reverseString(String str){
@@ -24,22 +26,14 @@ public class Character_replace {
 			newString += str.charAt(i);
 		}
 		return newString;
-	}
+	}	
 	
-	@Test
-	public void Test(){
-		Character_replace reverse = new Character_replace();
-		
-		String given = "hello";
-		String expected = "olleh";
-		String obtained = reverse.reverseString(given);
-		assertEquals(expected, obtained);
-	}
 
 	public static void main(String[] args) {
 		String mystr = "hello peoples of Ethiopia!";
 		Character_replace replace = new Character_replace();
-		String value = replace.replace(mystr, 'w');
+		String value = replace.replace(mystr, 'o');
+		
 		String reverse = replace.reverseString(mystr);
 		System.out.println(value);
 		System.out.println(reverse);
