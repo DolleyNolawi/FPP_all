@@ -1,19 +1,30 @@
 package org.meron.string;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Subclass extends Superclass {
+public class Subclass extends AbstructConstructor {
+	public final int  height;
+	//public int weight;
+	
+	public Subclass(int height ){
+		this.height = height;
+		//this.weight = weight;
+	}
+	@Override
+	public int myheight() {
+		return height;
+	}
 
 	@Override
-	protected int show(String x , int y){
-		return 0;
+	public int myweight() {
+		return height;
 	}
 	
-	public static void main(String[] args) {
-		String[] abc = new String[10];
-		System.out.println(abc[4]);
-
+	
+	public static void main(String[] args){
+	
+		AbstructConstructor sub = new Subclass(2);
+		System.out.println(sub.myheight());
+		
 	}
+	
 
 }
