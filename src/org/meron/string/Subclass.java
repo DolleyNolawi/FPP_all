@@ -1,29 +1,13 @@
 package org.meron.string;
 
-public class Subclass extends AbstructConstructor {
-	public final int  height;
-	//public int weight;
-	
-	public Subclass(int height ){
-		this.height = height;
-		//this.weight = weight;
-	}
-	@Override
-	public int myheight() {
-		return height;
-	}
+public class Subclass implements I1 , I2 {
 
-	@Override
-	public int myweight() {
-		return height;
-	}
-	
-	
 	public static void main(String[] args){
+		/*if you have the same variable or method from 2 
+		interface don't know how w/c to choose
+		 */		
+		//System.out.println(name);
 	
-		AbstructConstructor sub = new Subclass(2);
-		System.out.println(sub.myheight());
-		
 	}
 	
 
