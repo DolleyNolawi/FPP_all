@@ -16,3 +16,10 @@ class Outer2 implements Outer.Nested_Interface{
 		
 	}
 }
+
+interface OIterface{
+	class InInterface{
+		
+	}
+	
+}
