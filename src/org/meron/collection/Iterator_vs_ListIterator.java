@@ -18,9 +18,13 @@ public class Iterator_vs_ListIterator {
 				
 		iter = list.listIterator();
 		iter1 = list2.iterator();
-		
+		int i=0;
 		while(iter.hasNext()){
 			System.out.println(iter.next());
+			if(iter.hasPrevious() && i ==0){
+				System.out.println(iter.previous());
+				i++;
+			}			
 		}
 		while(iter1.hasNext()){
 			System.out.println(iter1.next());
