@@ -1,6 +1,7 @@
 package org.meron.collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class InsertionList {
@@ -15,6 +16,13 @@ public class InsertionList {
 		list.add(5);
 		list.add(4);
 		list.set(0, 7);
+		for(int l : list){
+			System.out.print(l);
+		}
+		System.out.println();
+		// reverse sort
+		Collections.sort(list , Collections.reverseOrder());
+		
 		for(int l : list){
 			System.out.print(l);
 		}
